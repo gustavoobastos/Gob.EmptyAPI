@@ -1,5 +1,7 @@
 # Gob.EmptyAPI
 
+[![build](https://github.com/gustavoobastos/Gob.EmptyAPI/workflows/build.yml/badge.svg)](https://github.com/gustavoobastos/Gob.EmptyAPI/workflows/build.yml)        
+
 ### Directory.Build.props
 https://learn.microsoft.com/pt-br/visualstudio/msbuild/customize-your-build?view=vs-2022
 
@@ -12,5 +14,5 @@ https://learn.microsoft.com/en-us/dotnet/core/tools/global-json
 ### .editorconfig
 https://learn.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options?view=vs-2022
 
-### Testes de integração no ASP.NET Core
+### Testes de integraÃ§Ã£o no ASP.NET Core
 https://learn.microsoft.com/pt-br/aspnet/core/test/integration-tests?view=aspnetcore-7.0
