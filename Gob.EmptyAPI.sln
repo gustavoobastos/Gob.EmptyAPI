@@ -15,6 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\workflows\codeql.yml = .github\workflows\codeql.yml
+		coverlet.runsettings = coverlet.runsettings
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
 		.config\dotnet-tools.json = .config\dotnet-tools.json
@@ -25,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gob.EmptyAPI", "src\Gob.EmptyAPI\Gob.EmptyAPI.csproj", "{B9E20A17-634C-46FE-A238-B24EB06CF15E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gob.EmptyAPI.Tests", "test\Gob.EmptyAPI.Tests\Gob.EmptyAPI.Tests.csproj", "{506D1254-4F3A-4308-B48C-DBAEAA30C15E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gob.EmptyAPI.Tests", "test\Gob.EmptyAPI.Tests\Gob.EmptyAPI.Tests.csproj", "{506D1254-4F3A-4308-B48C-DBAEAA30C15E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

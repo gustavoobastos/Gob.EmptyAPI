@@ -17,3 +17,6 @@ https://learn.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor
 
 ### Testes de integração no ASP.NET Core
 https://learn.microsoft.com/pt-br/aspnet/core/test/integration-tests?view=aspnetcore-7.0
+
+### coverlet.runsettings
+https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md
