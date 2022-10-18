@@ -20,7 +20,6 @@ jobs:
       with:
         global-json-file: global.json
     - run: echo '${{ steps.id-setup.outputs.dotnet-version }}'
-    - run: echo '${{ toJSON(steps.id-setup.outputs) }}'
         
     - name: Restore dependencies
       run: dotnet restore
@@ -29,15 +28,14 @@ jobs:
       run: dotnet build --no-restore
       
     - name: Test
-      id: id-test
       run: dotnet test --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings
-    - run: echo '${{ toJSON(steps.id-test.outputs.*) }}'
 
-    - name: Restore tools
-      run: dotnet tool restore
+    #- name: Restore tools
+    #  run: dotnet tool restore
 
     - name: Report generator
-      run: 'dotnet-reportgenerator-globaltool -reporttypes:Html_Dark;Badges -reports:**/TestResults/**/*.xml -targetdir:coverageReport'
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.1.10
+      run: 'reportgenerator -reporttypes:Html_Dark;Badges -reports:**/TestResults/**/*.xml -targetdir:coverageReport'
 
     #- name: Upload coverage report artifact
     #  uses: actions/upload-artifact@v3.1.0
