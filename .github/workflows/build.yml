@@ -20,6 +20,7 @@ jobs:
       with:
         global-json-file: global.json
     - run: echo '${{ steps.id-setup.outputs.dotnet-version }}'
+    - run: echo '${{ toJSON(steps.id-setup.outputs) }}'
         
     - name: Restore dependencies
       run: dotnet restore
