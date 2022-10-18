@@ -33,9 +33,9 @@ jobs:
     - name: Report generator
       uses: danielpalme/ReportGenerator-GitHub-Action@5.1.10
       with:
-        reports: '**/TestResults/**/*.xml'
+        reports: 'test/**/TestResults/**/coverage.opencover.xml'
         targetdir: 'coveragereport'
-        reporttypes: 'Html_Dark;Badges'
+        reporttypes: 'Html_Dark;Cobertura;Badges'
 
     - name: Upload coverage report artifact
       uses: actions/upload-artifact@v2.2.3
@@ -43,4 +43,12 @@ jobs:
         name: CoverageReport
         path: coveragereport
 
+    - name: Upload coverage report artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: BadgeCoverage
+        path: coveragereport/badge_combined.svg
+
+
+        #dotnet tool install dotnet-reportgenerator-globaltool --tool-path reportgeneratortool --version 5.1.10 --ignore-failed-sources
       #reportgenerator -reporttypes:'Html_Dark;Badges' -reports:**/TestResults/**/*.xml -targetdir:coverageReport
