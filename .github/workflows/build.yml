@@ -15,9 +15,11 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Setup .NET
+      id: id001
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        global-json-file: global.json
+    - run: echo '${{ steps.id001.outputs.dotnet-version }}'
         
     - name: Restore dependencies
       run: dotnet restore
