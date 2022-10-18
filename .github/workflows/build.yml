@@ -30,7 +30,7 @@ jobs:
     - name: Test
       id: id-test
       run: dotnet test --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings
-    - run: echo '${{ steps.id-test.outputs }}'
+    - run: echo '${{ steps.id-test.outputs.* }}'
 
     - name: Restore tools
       run: dotnet tool restore
