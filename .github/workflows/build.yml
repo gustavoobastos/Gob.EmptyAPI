@@ -30,13 +30,13 @@ jobs:
     - name: Test
       id: id-test
       run: dotnet test --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings
-    - run: echo '${{ toJSON(steps.id-test.outputs) }}'
+    - run: echo '${{ toJSON(steps.id-test.outputs.*) }}'
 
     - name: Restore tools
       run: dotnet tool restore
 
     - name: Report generator
-      run: 'reportgenerator -reporttypes:Html_Dark;Badges -reports:**/TestResults/**/*.xml -targetdir:coverageReport'
+      run: 'dotnet-reportgenerator-globaltool -reporttypes:Html_Dark;Badges -reports:**/TestResults/**/*.xml -targetdir:coverageReport'
 
     #- name: Upload coverage report artifact
     #  uses: actions/upload-artifact@v3.1.0
